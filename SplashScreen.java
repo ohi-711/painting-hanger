@@ -12,10 +12,9 @@ public class MainMenu
     char pressed;
     AudioStream as; // crediting Colin for his code that plays music
 
-    public MainMenu (Console con, String menuOption)
+    public MainMenu (Console con)
     {
     	c = con;
-    	option = menuOption;
     	draw ();
     	try // crediting Colin for his code that plays music
     	{
@@ -30,7 +29,7 @@ public class MainMenu
 
     public void run ()
     {
-	    draw();
+	draw();
       c.getChar();
       // clears screen using transition
     	c.setColor (Colours.black);
