@@ -41,10 +41,7 @@ public class MainMenu
             
             draw ();
             pressed = c.getChar ();
-            if (pressed == 'z')
-            {
-                break;
-            }
+            
             if (pressed == '1')
             {
                 option = "start";
@@ -60,6 +57,10 @@ public class MainMenu
             if (pressed == '4')
             {
                 option = "quit";
+            }
+            if (pressed == 'z')
+            {
+                break;
             }
         }
     }
