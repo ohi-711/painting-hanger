@@ -62,7 +62,10 @@ public class SplashScreen
 
     public void draw ()
     {
-        // add something here later for graphics
+        c.setColor (Colours.black);
+        c.setFont (new Font ("Ariel", Font.BOLD, 45));
+        c.drawString ("Painting Hanger", 140, 80);
+        // add more here later for graphics
 
     }
 }
