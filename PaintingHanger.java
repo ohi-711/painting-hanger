@@ -19,6 +19,7 @@ public class PaintingHanger {
     public void menu(){
         MainMenu m = new MainMenu(c, menuOption);
         m.run();
+        menuOption = m.option;
     }
     
     public void instructions(){
