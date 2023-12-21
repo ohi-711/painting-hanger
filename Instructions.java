@@ -33,17 +33,31 @@ public class Instructions
     }
 
 
-public void draw ()
-{
-    c.setColor (Colours.black);
-    c.setFont (new Font ("Ariel", Font.BOLD, 45));
-    c.drawString ("Painting Hanger", 140, 80);
-    c.drawString ("Go through the basement", 140, 80);
-    c.drawString ("to get the paintings,", 140, 90);
-    c.drawString ("and then put the", 140, 100);
-    c.drawString ("paintings up on the", 140, 110);
-    c.drawString ("living room wall!", 140, 120);
-    // add more here later for graphics
+    public void draw ()
+    {
+        while (true)
+        {
+            c.setColor (Colours.white);
+            c.fillRect (0, 0, 640, 500);
+            c.setColor (Colours.black);
+            c.setFont (new Font ("Ariel", Font.BOLD, 45));
+            c.drawString ("Painting Hanger", 140, 80);
 
-}
+            c.setFont (new Font ("Ariel", Font.BOLD, 35));
+            c.drawString ("Go through the", 140, 140);
+            c.drawString ("basement to get", 140, 180);
+            c.drawString ("the paintings,", 140, 220);
+            c.drawString ("and then put the", 140, 260);
+            c.drawString ("paintings up on the", 140, 300);
+            c.drawString ("living room wall!", 140, 340);
+
+            c.setFont (new Font ("Ariel", Font.BOLD, 25));
+            c.drawString ("Press 'z' to return", 140, 450); 
+            char pressed = c.getChar();
+            if (pressed == 'z')
+            {
+                break;
+            }
+        }
+    }
 }
