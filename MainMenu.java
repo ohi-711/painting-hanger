@@ -30,12 +30,6 @@ public class MainMenu
 
     public void run ()
     {
-        animate ();
-    }
-
-
-    public void animate ()
-    {
         while (true)
         {
             
@@ -64,7 +58,6 @@ public class MainMenu
             }
         }
     }
-
 
     public void draw ()
     {
