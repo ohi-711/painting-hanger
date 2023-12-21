@@ -69,6 +69,8 @@ public class MainMenu
     public void draw ()
     {
         // options
+        c.setColor (Colours.white);
+        c.fillRect (0, 0, 640, 500);
         c.setColor (Colours.orange);
         if (option.equals ("start"))
         {
@@ -111,4 +113,3 @@ public class MainMenu
 
     }
 }
-
