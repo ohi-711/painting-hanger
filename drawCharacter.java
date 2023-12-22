@@ -19,9 +19,15 @@ public class drawCharacter
     }
 
 
-
     public void draw (int locationX, int locationY)
     {
-	
+	try
+	{ // imports image
+	   BufferedImage menuBackground = ImageIO.read (new File ("character.png"));
+	   c.drawImage (menuBackground, locationX, locationY, null);
+	}
+	catch (IOException e)
+	{
+	}
     }
 }
