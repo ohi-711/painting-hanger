@@ -34,6 +34,12 @@ public class PaintingHanger
         Instructions i = new Instructions (c);
         i.run ();
     }
+    
+    public void scoreboard ()
+    {
+        Scoreboard s = new Scoreboard (c);
+        s.run ();
+    }
 
 
     public static void main (String[] args)
@@ -46,6 +52,10 @@ public class PaintingHanger
             if (p.menuOption.equals ("instructions"))
             {
                 p.instructions ();
+            }
+            if (p.menuOption.equals ("scoreboard"))
+            {
+                p.scoreboard ();
             }
             if (p.menuOption.equals ("quit"))
             {
