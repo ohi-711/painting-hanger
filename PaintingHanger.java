@@ -6,13 +6,19 @@ public class PaintingHanger
 {
     Console c;
     String menuOption = "play";
-
+    int locationX;
+    int locationY;
 
     public PaintingHanger ()
     {
         c = new Console ("Painting Hanger");
     }
-
+    
+    public void drawCharacter ()
+    {
+        drawCharacter d = new drawCharacter (c, locationX, locationY);
+        
+    }
 
     public void splashScreen ()
     {
