@@ -20,7 +20,6 @@ public class PaintingHanger
         s.run ();
     }
 
-
     public void menu ()
     {
         MainMenu m = new MainMenu (c, menuOption);
@@ -28,6 +27,11 @@ public class PaintingHanger
         menuOption = m.option;
     }
 
+    public void gameIntro ()
+    {
+        GameIntro a = new GameIntro (c);
+        a.run ();
+    }
 
     public void instructions ()
     {
@@ -55,6 +59,10 @@ public class PaintingHanger
         while (true)
         {
             p.menu ();
+            if (p.menuOption.equals ("start"))
+            {
+                p.gameIntro ();
+            }
             if (p.menuOption.equals ("instructions"))
             {
                 p.instructions ();
