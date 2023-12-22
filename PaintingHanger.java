@@ -40,6 +40,12 @@ public class PaintingHanger
         Scoreboard s = new Scoreboard (c);
         s.run ();
     }
+    
+    public void goodbye ()
+    {
+        Goodbye g = new Goodbye (c);
+        g.run ();
+    }
 
 
     public static void main (String[] args)
@@ -59,6 +65,7 @@ public class PaintingHanger
             }
             if (p.menuOption.equals ("quit"))
             {
+                p.goodbye ();
                 break;
             }
         }
