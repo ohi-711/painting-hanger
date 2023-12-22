@@ -42,7 +42,7 @@ public class Instructions
         c.setFont (new Font ("Ariel", Font.BOLD, 45));
         c.drawString ("Painting Hanger", 140, 80);
 
-        c.setFont (new Font ("Ariel", Font.BOLD, 35));
+        c.setFont (new Font ("Ariel", Font.PLAIN, 35));
         c.drawString ("Go through the", 140, 140);
         c.drawString ("basement to get", 140, 180);
         c.drawString ("the paintings,", 140, 220);
