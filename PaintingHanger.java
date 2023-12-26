@@ -5,7 +5,7 @@ import java.awt.*;
 public class PaintingHanger
 {
     Console c;
-    String menuOption = "play";
+    String menuOption = "start";
     int locationX;
     int locationY;
 
@@ -14,10 +14,10 @@ public class PaintingHanger
         c = new Console ("Painting Hanger");
     }
     
-    public void drawCharacter ()
+    public void basement ()
     {
-        drawCharacter d = new drawCharacter (c, locationX, locationY);
-        
+        Basement b = new Basement (c, locationX, locationY);
+        b.run ();
     }
 
     public void splashScreen ()
@@ -68,6 +68,7 @@ public class PaintingHanger
             if (p.menuOption.equals ("start"))
             {
                 p.gameIntro ();
+                p.basement ();
             }
             if (p.menuOption.equals ("instructions"))
             {
