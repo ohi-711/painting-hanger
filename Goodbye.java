@@ -17,7 +17,7 @@ public class Goodbye
         c = con;
         try // crediting Colin for his code that plays music
         {
-            as = new AudioStream (new FileInputStream ("88. Lost Library.wav"));
+            as = new AudioStream (new FileInputStream ("music.wav"));
             AudioPlayer.player.start (as);
         }
         catch (Exception e)
