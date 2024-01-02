@@ -2,7 +2,6 @@ import hsa.Console;
 import hsa.*;
 import java.io.*;
 import java.awt.*;
-import sun.audio.*;
 import java.awt.Font;
 
 public class GameIntro
@@ -10,20 +9,11 @@ public class GameIntro
     Console c;
     String option;
     char pressed;
-    AudioStream as; // crediting Colin for his code that plays music
 
     public GameIntro (Console con)
     {
 	c = con;
 	draw ();
-	try // crediting Colin for his code that plays music
-	{
-	    as = new AudioStream (new FileInputStream ("music.wav"));
-	    AudioPlayer.player.start (as);
-	}
-	catch (Exception e)
-	{
-	}
     }
 
 

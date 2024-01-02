@@ -2,7 +2,6 @@ import hsa.Console;
 import hsa.*;
 import java.io.*;
 import java.awt.*;
-import sun.audio.*;
 import java.awt.Font;
 
 public class Goodbye
@@ -10,19 +9,10 @@ public class Goodbye
     Console c;
     String option;
     char pressed;
-    AudioStream as; // crediting Colin for his code that plays music
 
     public Goodbye (Console con)
     {
         c = con;
-        try // crediting Colin for his code that plays music
-        {
-            as = new AudioStream (new FileInputStream ("music.wav"));
-            AudioPlayer.player.start (as);
-        }
-        catch (Exception e)
-        {
-        }
     }
 
 

@@ -1,6 +1,8 @@
 import hsa.Console;
 import java.lang.*;
 import java.awt.*;
+import sun.audio.*;
+import java.io.*;
 
 public class PaintingHanger
 {
@@ -62,6 +64,14 @@ public class PaintingHanger
     {
         PaintingHanger p = new PaintingHanger ();
         p.splashScreen ();
+        try // crediting Colin for his code that plays music
+        {
+            AudioStream as = new AudioStream (new FileInputStream ("music.wav"));
+            AudioPlayer.player.start (as);
+        }
+        catch (Exception e)
+        {
+        }
         while (true)
         {
             p.menu ();

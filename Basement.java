@@ -2,7 +2,6 @@ import hsa.Console;
 import hsa.*;
 import java.io.*;
 import java.awt.*;
-import sun.audio.*;
 import java.awt.Font;
 
 public class Basement
@@ -13,7 +12,6 @@ public class Basement
     int locationY;
     char pressed;
     String direction = "front";
-    AudioStream as; // crediting Colin for his code that plays music
 
     public Basement (Console con, int locationX, int locationY)
     {
@@ -21,14 +19,6 @@ public class Basement
 	locationX = locationX;
 	locationY = locationY;
 	walk ();
-	try // crediting Colin for his code that plays music
-	{
-	    as = new AudioStream (new FileInputStream ("music.wav"));
-	    AudioPlayer.player.start (as);
-	}
-	catch (Exception e)
-	{
-	}
     }
 
 

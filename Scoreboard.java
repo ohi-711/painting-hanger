@@ -18,8 +18,8 @@ public class Scoreboard
         draw ();
         try // crediting Colin for his code that plays music
         {
-            as = new AudioStream (new FileInputStream ("music.wav"));
-            AudioPlayer.player.start (as);
+            //as = new AudioStream (new FileInputStream ("music.wav"));
+            //AudioPlayer.player.start (as);
         }
         catch (Exception e)
         {
