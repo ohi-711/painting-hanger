@@ -1,3 +1,4 @@
+// imports
 import hsa.Console;
 import hsa.*;
 import java.io.*;
@@ -56,6 +57,7 @@ public class SplashScreen
         c.setFont (new Font ("Ariel", Font.BOLD, 45));
         c.drawString ("Painting Hanger", 140, 80);
         // add more here later for graphics
+        // also mention somewhere that you press 1,2,3,4 and z to choose and select a menu option
 
     }
 }
