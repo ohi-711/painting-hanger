@@ -65,7 +65,7 @@ public class Basement
             walk ();
             d.draw (c, locationX, locationY, direction);
             
-            if (locationX > 300 && locationX <= 400 && locationY > 400 && locationY <= 500)
+            if (locationX > 300 && locationX <= 400 && locationY > 400 && locationY <= 500) // fix collision pls
                 break;
         }
     }
