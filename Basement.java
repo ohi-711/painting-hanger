@@ -15,55 +15,58 @@ public class Basement
 
     public Basement (Console con, int locationX, int locationY)
     {
-	c = con;
-	locationX = locationX;
-	locationY = locationY;
-	walk ();
+        c = con;
+        locationX = locationX;
+        locationY = locationY;
+        walk ();
     }
 
 
     public void run ()
     {
-	drawCharacter ();
+        drawCharacter ();
     }
 
 
     public void walk ()
     {
-	char pressed = c.getChar ();
+        char pressed = c.getChar ();
 
 
-	if (pressed == 'w' && locationY - 20 > 0)
-	{
-	    locationY -= 20;
-	    direction = "front";
-	}
-	else if (pressed == 'd' && locationX + 20 + 50 < 640) // 50 is character width
-	{
-	    locationX += 20;
-	    direction = "right";
-	}
-	else if (pressed == 's' && locationY + 20 + 50 < 500) // 50 is character height
-	{
-	    locationY += 20;
-	    direction = "back";
-	}
-	else if (pressed == 'a' && locationX - 20 > 0)
-	{
-	    locationX -= 20;
-	    direction = "left";
-	}
+        if (pressed == 'w' && locationY - 20 > 0)
+        {
+            locationY -= 20;
+            direction = "front";
+        }
+        else if (pressed == 'd' && locationX + 20 + 50 < 640) // 50 is character width
+        {
+            locationX += 20;
+            direction = "right";
+        }
+        else if (pressed == 's' && locationY + 20 + 50 < 500) // 50 is character height
+        {
+            locationY += 20;
+            direction = "back";
+        }
+        else if (pressed == 'a' && locationX - 20 > 0)
+        {
+            locationX -= 20;
+            direction = "left";
+        }
 
     }
 
 
     public void drawCharacter ()
     {
-	drawCharacter d = new drawCharacter (c, locationX, locationY, direction);
-	while (true)
-	{
-	    walk ();
-	    d.draw (c, locationX, locationY, direction);
-	}
+        drawCharacter d = new drawCharacter (c, locationX, locationY, direction);
+        while (true)
+        {
+            walk ();
+            d.draw (c, locationX, locationY, direction);
+            
+            if (locationX > 300 && locationX <= 400 && locationY > 400 && locationY <= 500)
+                break;
+        }
     }
 }
