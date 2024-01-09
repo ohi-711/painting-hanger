@@ -22,6 +22,12 @@ public class PaintingHanger
         b.run ();
     }
 
+    public void livingRoom ()
+    {
+        LivingRoom l = new LivingRoom (c);
+        l.display ();
+    }
+
     public void splashScreen ()
     {
         SplashScreen s = new SplashScreen (c);
@@ -79,6 +85,7 @@ public class PaintingHanger
             {
                 p.gameIntro ();
                 p.basement ();
+                p.livingRoom ();
             }
             if (p.menuOption.equals ("instructions"))
             {
