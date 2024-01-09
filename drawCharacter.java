@@ -28,19 +28,19 @@ public class drawCharacter
         {
             if (direction.equals ("front"))
             {
-                character = ImageIO.read (new File ("front_character.jpg"));
+                character = ImageIO.read (new File ("img/front_character.jpg"));
             }
             else if (direction.equals ("back"))
             {
-                character = ImageIO.read (new File ("back_character.jpg"));
+                character = ImageIO.read (new File ("img/back_character.jpg"));
             }
             else if (direction.equals ("left"))
             {
-                character = ImageIO.read (new File ("left_character.jpg"));
+                character = ImageIO.read (new File ("img/left_character.jpg"));
             }
             else if (direction.equals ("right"))
             {
-                character = ImageIO.read (new File ("right_character.jpg"));
+                character = ImageIO.read (new File ("img/right_character.jpg"));
             }
         }
         catch (IOException e)

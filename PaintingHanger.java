@@ -72,7 +72,7 @@ public class PaintingHanger
         p.splashScreen ();
         try // crediting Colin for his code that plays music
         {
-            AudioStream as = new AudioStream (new FileInputStream ("music.wav"));
+            AudioStream as = new AudioStream (new FileInputStream ("audio/music.wav"));
             AudioPlayer.player.start (as);
         }
         catch (Exception e)
