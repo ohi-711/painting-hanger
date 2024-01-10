@@ -8,6 +8,7 @@ public class PaintingSelection
 {
     Console c;
     char pressed;
+    int paintingPoints;
 
     public PaintingSelection (Console con, char menuOption)
     {
@@ -53,26 +54,31 @@ public class PaintingSelection
         PaintingFive l = new PaintingFive ();
 	    l.display (200, 200);
         
-        // options
+        // draws an arrow next to the selected painting
         if (pressed == '1')
         {
             arrow (0, 100); 
+	    paintingPoints = 100; // gives a value to paintingPoints depending on the choice of painting
         }
         if (pressed == '2')
         {
             arrow (100, 100); 
+            paintingPoints = 200;
         }
         if (pressed == '3')
         {
             arrow (0, 200); 
+	    paintingPoints = 100;
         }
         if (pressed == '4')
         {
             arrow (100, 200); 
+	    paintingPoints = 100;
         }
         if (pressed == '5')
         {
             arrow (200, 200); 
+	    paintingPoints = 100;
         }
 	if (pressed == 'z')
 	{
