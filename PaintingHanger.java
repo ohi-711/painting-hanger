@@ -8,6 +8,7 @@ public class PaintingHanger
 {
     Console c;
     String menuOption = "start";
+    char paintingOption = '1';
     int locationX;
     int locationY;
 
@@ -36,8 +37,9 @@ public class PaintingHanger
 
     public void paintingSelection ()
     {
-        PaintingSelection ps = new PaintingSelection (c);
+        PaintingSelection ps = new PaintingSelection (c, paintingOption);
         ps.run ();
+        paintingOption = ps.pressed;
     }
 
     public void menu ()
