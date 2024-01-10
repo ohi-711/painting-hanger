@@ -5,11 +5,10 @@ public class Alice
 {
     Console c;
 
-    public Alice ()
+    public Alice (Console con)
     {
-	c = new Console ();
+	c = con;
     }
-
 
     Color brown = new Color (121, 85, 72);
     Color skin = new Color (255, 205, 210);
@@ -39,12 +38,5 @@ public class Alice
 	c.fillRect (80 + x, 20 + y, 10, 130);
 	c.fillRect (60 + x, 70 + y, 20, 10);
 	c.fillRect (70 + x, 110 + y, 10, 50);
-    }
-
-
-    public static void main (String[] args)
-    {
-	Alice l = new Alice ();
-	l.display (0, 0);
     }
 }
