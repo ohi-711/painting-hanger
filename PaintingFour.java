@@ -3,6 +3,8 @@ import hsa.Console;
 
 public class PaintingFour
 {
+    Console c;
+	
     public PaintingFour (Console con)
     {
 	c = con;
