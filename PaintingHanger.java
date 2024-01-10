@@ -34,6 +34,12 @@ public class PaintingHanger
         s.run ();
     }
 
+    public void paintingSelection ()
+    {
+        PaintingSelection ps = new PaintingSelection (c);
+        ps.run ();
+    }
+
     public void menu ()
     {
         MainMenu m = new MainMenu (c, menuOption);
@@ -86,6 +92,7 @@ public class PaintingHanger
                 p.gameIntro ();
                 p.basement ();
                 p.livingRoom ();
+                p.paintingSelection ();
             }
             if (p.menuOption.equals ("instructions"))
             {
