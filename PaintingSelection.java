@@ -27,38 +27,38 @@ public class PaintingSelection
         }
     }
 
+    private void arrow (int locationX, int locationY)
+    {
+        c.setColor (Colours.black);
+        // draw arrow here
+    }
+
     public void draw ()
     {
         // options
         c.setColor (Colours.white);
         c.fillRect (0, 0, 640, 500);
-        c.setColor (Colours.orange);
-        if (option.equals ("start"))
+        
+        if (pressed == '1')
         {
-            c.setColor (Colours.darkOrange);
+            arrow (0, 100); 
         }
-        c.fillRect (130, 130, 370, 60);
-
-        c.setColor (Colours.orange);
-        if (option.equals ("instructions"))
+        if (pressed == '2')
         {
-            c.setColor (Colours.darkOrange);
+            arrow (0, 300); 
         }
-        c.fillRect (130, 210, 370, 60);
-
-        c.setColor (Colours.orange);
-        if (option.equals ("scoreboard"))
+        if (pressed == '3')
         {
-            c.setColor (Colours.darkOrange);
+            arrow (100, 100); 
         }
-        c.fillRect (130, 290, 370, 60);
-
-        c.setColor (Colours.orange);
-        if (option.equals ("quit"))
+        if (pressed == '4')
         {
-            c.setColor (Colours.darkOrange);
+            arrow (100, 200); 
         }
-        c.fillRect (130, 370, 370, 60);
+        if (pressed == '5')
+        {
+            arrow (100, 300); 
+        }
 
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.BOLD, 45));
