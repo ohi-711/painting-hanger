@@ -31,6 +31,7 @@ public class PaintingSelection
     private void arrow (int locationX, int locationY)
     {
         c.setColor (Colours.red);
+        c.fillRect (locationX, locationY, 20, 20);
         // draw arrow here
     }
 
@@ -41,50 +42,50 @@ public class PaintingSelection
         c.fillRect (0, 0, 640, 500);
         
         // draws paintings
-        PaintingOne l = new PaintingOne ();
-            l.display (0, 0);
+        PaintingOne l = new PaintingOne (c);
+            l.display (0, 90);
 
-        PaintingTwo l2 = new PaintingTwo ();
-            l2.display (100, 100);
+        PaintingTwo l2 = new PaintingTwo (c);
+            l2.display (240, 90);
 
-        PaintingThree l3 = new PaintingThree ();
-            l3.display (0, 200);
+        PaintingThree l3 = new PaintingThree (c);
+            l3.display (380, 90);
 
-        PaintingFour l4 = new PaintingFour ();
-            l4.display (100, 200);
+        PaintingFour l4 = new PaintingFour (c);
+            l4.display (0, 260);
 
-        PaintingFive l5 = new PaintingFive ();
-            l5.display (200, 200);
+        PaintingFive l5 = new PaintingFive (c);
+            l5.display (300, 260);
         
         // draws an arrow next to the selected painting
         if (pressed == '1')
         {
-            arrow (0, 100); 
-            paintingPoints = 100; // gives a value to paintingPoints depending on the choice of painting
+            arrow (0, 90); 
+            paintingPoints = 400; // gives a value to paintingPoints depending on the choice of painting
         }
         if (pressed == '2')
         {
-            arrow (100, 100); 
-            paintingPoints = 200;
+            arrow (240, 90); 
+            paintingPoints = 300;
         }
         if (pressed == '3')
         {
-            arrow (0, 200); 
-            paintingPoints = 100;
+            arrow (380, 90); 
+            paintingPoints = 200;
         }
         if (pressed == '4')
         {
-            arrow (100, 200); 
-            paintingPoints = 100;
+            arrow (0, 260); 
+            paintingPoints = 500;
         }
         if (pressed == '5')
         {
-            arrow (200, 200); 
+            arrow (300, 260); 
             paintingPoints = 100;
         }
 
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.BOLD, 42));
-        c.drawString ("Select a painting!", 110, 80);
+        c.drawString ("Select a painting!", 148, 65);
     }
 }
