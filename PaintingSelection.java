@@ -14,7 +14,6 @@ public class PaintingSelection
     {
         c = con;
         option = menuOption;
-        draw ();
     }
 
 
