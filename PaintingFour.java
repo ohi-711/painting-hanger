@@ -76,11 +76,4 @@ public class PaintingFour
 	c.fillRect (160 + x, 70 + y, 20, 10);
 	c.fillRect (170 + x, 80 + y, 10, 10);
     }
-
-
-    public static void main (String[] args)
-    {
-	PaintingFour l = new PaintingFour ();
-	l.display (0, 0);
-    }
 }
