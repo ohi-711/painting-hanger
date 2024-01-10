@@ -27,7 +27,7 @@ public class PaintingSelection
 
     private void arrow (int locationX, int locationY)
     {
-        c.setColor (Colours.black);
+        c.setColor (Colours.red);
         // draw arrow here
     }
 
