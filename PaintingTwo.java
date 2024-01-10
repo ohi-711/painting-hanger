@@ -64,11 +64,4 @@ public class PaintingTwo
 	c.fillRect (100 + x, 100 + y, 20, 10);
 	c.fillRect (110 + x, 110 + y, 10, 10);
     }
-
-
-    public static void main (String[] args)
-    {
-	PaintingTwo l = new PaintingTwo ();
-	l.display (0, 0);
-    }
 }
