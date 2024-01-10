@@ -7,13 +7,12 @@ import java.awt.Font;
 public class PaintingSelection
 {
     Console c;
-    String option;
     char pressed;
 
-    public PaintingSelection (Console con, String menuOption)
+    public PaintingSelection (Console con, char menuOption)
     {
         c = con;
-        option = menuOption;
+        pressed = menuOption;
     }
 
 
@@ -34,11 +33,11 @@ public class PaintingSelection
 
     public void draw ()
     {
+	// clears background
         c.setColor (Colours.white);
         c.fillRect (0, 0, 640, 500);
         
         // draws paintings
-        
         PaintingOne l = new PaintingOne ();
 	    l.display (0, 0);
 
@@ -55,7 +54,6 @@ public class PaintingSelection
 	    l.display (200, 200);
         
         // options
-
         if (pressed == '1')
         {
             arrow (0, 100); 
@@ -76,6 +74,10 @@ public class PaintingSelection
         {
             arrow (200, 200); 
         }
+	if (pressed == 'z')
+	{
+	    break;
+	}
 
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.BOLD, 42));
