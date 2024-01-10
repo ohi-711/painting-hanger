@@ -96,11 +96,4 @@ public class PaintingThree
 	c.fillRect (170 + x, 80 + y, 10, 30);
 	c.fillRect (150 + x, 90 + y, 10, 10);
     }
-
-
-    public static void main (String[] args)
-    {
-	PaintingThree l = new PaintingThree ();
-	l.display (0, 0);
-    }
 }
