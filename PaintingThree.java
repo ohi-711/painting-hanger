@@ -5,9 +5,9 @@ public class PaintingThree
 {
     Console c;
 
-    public PaintingThree ()
+    public PaintingThree (Console con)
     {
-	c = new Console ();
+	c = con;
     }
 
 
