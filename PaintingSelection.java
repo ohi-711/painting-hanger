@@ -35,21 +35,39 @@ public class PaintingSelection
 
     public void draw ()
     {
-        // options
         c.setColor (Colours.white);
         c.fillRect (0, 0, 640, 500);
         
+        // draws paintings
+        
+        PaintingOne l = new PaintingOne ();
+	    l.display (0, 0);
+
+        PaintingTwo l = new PaintingTwo ();
+	    l.display (100, 100);
+
+        PaintingThree l = new PaintingThree ();
+	    l.display (0, 200);
+
+        PaintingFour l = new PaintingFour ();
+	    l.display (100, 200);
+
+        PaintingFive l = new PaintingFive ();
+	    l.display (200, 200);
+        
+        // options
+
         if (pressed == '1')
         {
             arrow (0, 100); 
         }
         if (pressed == '2')
         {
-            arrow (0, 300); 
+            arrow (100, 100); 
         }
         if (pressed == '3')
         {
-            arrow (100, 100); 
+            arrow (0, 200); 
         }
         if (pressed == '4')
         {
@@ -57,11 +75,11 @@ public class PaintingSelection
         }
         if (pressed == '5')
         {
-            arrow (100, 300); 
+            arrow (200, 200); 
         }
 
         c.setColor (Colours.black);
-        c.setFont (new Font ("Ariel", Font.BOLD, 45));
-        c.drawString ("Painting Hanger", 140, 80);
+        c.setFont (new Font ("Ariel", Font.BOLD, 42));
+        c.drawString ("Select a painting!", 110, 80);
     }
 }
