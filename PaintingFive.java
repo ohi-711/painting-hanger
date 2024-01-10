@@ -67,11 +67,4 @@ public class PaintingFive
 	c.fillRect (290 + x, 130 + y, 10, 120);
 	c.fillRect (300 + x, 120 + y, 20, 130);
     }
-
-
-    public static void main (String[] args)
-    {
-	PaintingFive l = new PaintingFive ();
-	l.display (0, 0);
-    }
 }
