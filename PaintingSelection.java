@@ -31,8 +31,15 @@ public class PaintingSelection
     private void arrow (int locationX, int locationY)
     {
         c.setColor (Colours.red);
-        c.fillRect (locationX, locationY, 20, 20);
-        // draw arrow here
+        c.fillRect (locationX-20, locationY-20, 10, 10);
+        c.fillRect (locationX-10, locationY-10, 10, 10);
+        c.fillRect (locationX, locationY, 10, 10);
+        c.fillRect (locationX+10, locationY+10, 10, 10);
+        c.fillRect (locationX+20, locationY, 10, 10);
+        c.fillRect (locationX, locationY+20, 10, 10);
+        c.fillRect (locationX+20, locationY+20, 10, 10);
+        c.fillRect (locationX+20, locationY+10, 10, 10);
+        c.fillRect (locationX+10, locationY+20, 10, 10);
     }
 
     public void draw ()
