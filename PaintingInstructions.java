@@ -35,6 +35,7 @@ public class PaintingInstructions
         Alice a2 = new Alice (c);
         
         c.getChar ();
+        c.getChar ();
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.PLAIN, 30));
         c.drawString ("instructions here", 140, 140);
@@ -46,7 +47,7 @@ public class PaintingInstructions
         a2.display (200, 250);
         
         c.setFont (new Font ("Ariel", Font.PLAIN, 30));
-        c.c.drawString ("more instructions here", 140, 140);
+        c.drawString ("more instructions here", 140, 140);
         c.setFont (new Font ("Ariel", Font.BOLD, 25));
         c.drawString ("Press any key to continue", 140, 450);
         c.getChar ();
@@ -55,7 +56,7 @@ public class PaintingInstructions
         a2.display (200, 250);
 
         c.setFont (new Font ("Ariel", Font.PLAIN, 30));
-        c.c.drawString ("thank you for your help!!!!", 140, 140);
+        c.drawString ("thank you for your help!!!!", 140, 140);
         c.setFont (new Font ("Ariel", Font.BOLD, 25));
         c.drawString ("Press any key to continue", 140, 450);
         
