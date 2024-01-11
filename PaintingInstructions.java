@@ -13,6 +13,7 @@ public class PaintingInstructions
     public PaintingInstructions (Console con)
     {
         c = con;
+        c.getChar ();
     }
 
 
@@ -24,7 +25,6 @@ public class PaintingInstructions
         Alice a = new Alice (c);
         a.display (200, 250);
         
-        c.getChar();
         draw ();
     }
 
