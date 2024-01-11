@@ -5,9 +5,9 @@ public class LivingRoomNone
 {
     Console c;
 
-    public LivingRoomNone ()
+    public LivingRoomNone (Console con)
     {
-	c = new Console ("ISP Living Room Background");
+	c = con;
     }
 
 
@@ -246,12 +246,5 @@ public class LivingRoomNone
 	rectangle (170, 250, 470, 270);
 	rectangle (180, 280, 460, 290);
 	rectangle (190, 300, 450, 320);
-    }
-
-
-    public static void main (String[] args)
-    {
-	LivingRoomNone l = new LivingRoomNone ();
-	l.display ();
     }
 }
