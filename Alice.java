@@ -10,22 +10,17 @@ public class Alice
         c = con;
     }
 
-    Color brown = new Color (121, 85, 72);
-    Color skin = new Color (255, 205, 210);
-    Color shirt = new Color (233, 40, 99);
-    Color pants = new Color (63, 81, 181);
-
     public void display (int x, int y)
     {
-        c.setColor (skin);
+        c.setColor (Colours.skin);
         c.fillRect (10 + x, 20 + y, 70, 50);
-        c.setColor (shirt);
+        c.setColor (Colours.shirt);
         c.fillRect (20 + x, 70 + y, 60, 80);
-        c.setColor (pants);
+        c.setColor (Colours.pants);
         c.fillRect (10 + x, 150 + y, 30, 100);
         c.fillRect (50 + x, 150 + y, 30, 100);
         c.fillRect (40 + x, 150 + y, 10, 30);
-        c.setColor (brown);
+        c.setColor (Colours.brown);
         c.fillRect (20 + x, 30 + y, 10, 20);
         c.fillRect (60 + x, 30 + y, 10, 20);
         c.fillRect (20 + x, 0 + y, 50, 10);
