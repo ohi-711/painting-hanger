@@ -65,4 +65,10 @@ public class Colours {
     public static Color fiveorange = new Color (255, 110, 64);
     public static Color fiveorangeLight = new Color (255, 171, 0);
     public static Color fiveyellow = new Color (255, 202, 40);
+    
+    //Alice
+    public static Color brown = new Color (121, 85, 72);
+    public static Color skin = new Color (255, 205, 210);
+    public static Color shirt = new Color (233, 40, 99);
+    public static Color pants = new Color (63, 81, 181);
 }
