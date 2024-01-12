@@ -1,6 +1,15 @@
 import java.awt.*;
 import hsa.Console;
 
+/**
+* This program displays the living room for Anne, Daisy & April's ISP for ICS3UP
+* @author Anne You
+* @teacher Ms. Krasteva
+* @assignment ISP
+* January 12th, 2024
+* Credits: https://www.freepik.com/free-vector/cartoon-living-room-interior-background-template-cozy-house-apartment-concept_2238509.htm
+*/
+
 public class LivingRoomNone
 {
     Console c;
@@ -11,6 +20,7 @@ public class LivingRoomNone
     }
 
 
+    //In horizontal(), the x and y coordinates and the number of squares (z) are inputted to draw z amount of 10 by 10 squares horizontally to the right from (x,y)[top left corner of the square]
     public void horizontal (int x, int y, int z)
     {
         for (int i = 0 ; i < z ; i++)
@@ -20,6 +30,7 @@ public class LivingRoomNone
     }
 
 
+    //In vertical(), the x and y coordinates, the number of squares (z) and a boolean (p) are inputted to draw z amount of 10 by 10 squares vertically upwards from (x,y)[top left corner of the square]
     public void vertical (int x, int y, int w, boolean p)
     {
         for (int i = 0 ; i < w ; i++)
@@ -29,6 +40,7 @@ public class LivingRoomNone
     }
 
 
+    //In vertical(), the x and y cooridnates and the number of squares (z) are inputted to draw z amount of 10 by 10 squares vertically downwards from (x,y)[top left corner of the square]
     public void vertical (int x, int y, int w)
     {
         for (int i = 0 ; i < w ; i++)
@@ -38,6 +50,7 @@ public class LivingRoomNone
     }
 
 
+    //In diagonal(), the x and y coordinates and the number of squares (z) are inputted to draw z amount of 10 by 10 squares diagonally upwards and to the left from (x,y)[top left corner of the square]
     public void diagonal (int x, int y, int z)
     {
         for (int i = 0 ; i < z ; i++)
@@ -47,6 +60,7 @@ public class LivingRoomNone
     }
 
 
+    //In diagonal(), the x and y coordinates, the number of squares (z) and a boolean (p) are inputted to draw z amount of 10 by 10 squares diagonally upwards and to the right from (x,y)[top left corner of the square]
     public void diagonal (int x, int y, int z, boolean p)
     {
         for (int i = 0 ; i < z ; i++)
@@ -56,12 +70,14 @@ public class LivingRoomNone
     }
 
 
+    //In diagonal(), the x and y coordinates are inputted to draw a 10 by 10 square at (x,y)[top left corner of the square]
     public void square (int x, int y)
     {
         c.fillRect (x, y, 10, 10);
     }
 
 
+    //In diagonal(), the x and y coordinates (the top left corner) and the x (z) and y (w) coordinates (the bottom right corner) are inputted to draw a rectangle using 10 by 10 squares between these two points
     public void rectangle (int x, int y, int z, int w)
     {
         for (int i = y ; i <= w ; i += 10)
@@ -74,12 +90,16 @@ public class LivingRoomNone
     }
 
 
+    //In display(), the living room is drawn
     public void display ()
     {
+        //Wall
         c.setColor (Colours.wall);
         rectangle (0, 0, 640, 350);
+        //Wall Trim
         c.setColor (Colours.lining);
         rectangle (0, 360, 640, 370);
+        //Tiles
         c.setColor (Colours.tile);
         rectangle (0, 380, 640, 490);
         c.setColor (Colours.grout);
@@ -143,7 +163,7 @@ public class LivingRoomNone
         square (580, 410);
         vertical (570, 400, 2, true);
         diagonal (630, 400, 2);
-
+        //left Cabinet 
         c.setColor (Colours.cabinetLeg);
         horizontal (40, 300, 9);
         horizontal (40, 380, 9);
@@ -151,6 +171,7 @@ public class LivingRoomNone
         vertical (120, 390, 10, true);
         c.setColor (Colours.cOpening);
         rectangle (50, 310, 110, 370);
+        //Plant
         c.setColor (Colours.fPot);
         horizontal (50, 260, 7);
         horizontal (60, 270, 5);
@@ -182,7 +203,7 @@ public class LivingRoomNone
         c.setColor (Colours.y);
         square (100, 150);
         diagonal (60, 170, 2);
-
+        //Right Cabinet
         c.setColor (Colours.cabinetLeg);
         horizontal (520, 280, 11);
         horizontal (520, 310, 11);
@@ -194,6 +215,7 @@ public class LivingRoomNone
         rectangle (530, 290, 610, 300);
         rectangle (530, 320, 610, 330);
         rectangle (530, 350, 610, 370);
+        //Lamp
         c.setColor (Colours.lb);
         horizontal (560, 270, 3);
         vertical (570, 260, 4, true);
@@ -204,7 +226,7 @@ public class LivingRoomNone
         horizontal (560, 200, 3);
         horizontal (560, 190, 3);
         square (570, 180);
-
+        //Couch
         c.setColor (Colours.cabinetLeg);
         horizontal (180, 390, 2);
         square (180, 400);
