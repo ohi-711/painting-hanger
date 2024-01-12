@@ -10,24 +10,6 @@ public class LivingRoom
         c = con;
     }
 
-
-    Color wall = new Color (204, 219, 253);
-    Color grout = new Color (171, 196, 255);
-    Color tile = new Color (182, 204, 254);
-    Color lining = new Color (226, 234, 252);
-    Color cOpening = new Color (171, 196, 255);
-    Color cabinetLeg = new Color (115, 82, 56);
-    Color fPot = new Color (255, 196, 214);
-    Color lsb = new Color (255, 135, 171);
-    Color lst = new Color (255, 166, 193);
-    Color lb = new Color (139, 140, 137);
-    Color cSide = new Color (142, 148, 242);
-    Color cMiddle = new Color (173, 167, 255);
-    Color cTop = new Color (129, 135, 220);
-    Color gOne = new Color (76, 175, 80);
-    Color gTwo = new Color (139, 195, 74);
-    Color y = new Color (205, 220, 57);
-
     public void horizontal (int x, int y, int z)
     {
         try
@@ -146,13 +128,13 @@ public class LivingRoom
 
     public void display ()
     {
-        c.setColor (wall);
+        c.setColor (Colours.wall);
         rectangle (0, 0, 640, 350);
-        c.setColor (lining);
+        c.setColor (Colours.lining);
         rectangle (0, 360, 640, 370);
-        c.setColor (tile);
+        c.setColor (Colours.tile);
         rectangle (0, 380, 640, 490);
-        c.setColor (grout);
+        c.setColor (Colours.grout);
         horizontal (0, 380, 64);
         horizontal (0, 420, 64);
         horizontal (0, 460, 64);
@@ -214,19 +196,19 @@ public class LivingRoom
         vertical (570, 400, 2, true);
         diagonal (630, 400, 2);
 
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         horizontal (40, 300, 9);
         horizontal (40, 380, 9);
         vertical (40, 390, 10, true);
         vertical (120, 390, 10, true);
-        c.setColor (cOpening);
+        c.setColor (Colours.cOpening);
         rectangle (50, 310, 110, 370);
-        c.setColor (fPot);
+        c.setColor (Colours.fPot);
         horizontal (50, 260, 7);
         horizontal (60, 270, 5);
         horizontal (60, 280, 5);
         horizontal (70, 290, 3);
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         vertical (80, 250, 10, true);
         square (90, 150);
         vertical (100, 140, 2, true);
@@ -234,7 +216,7 @@ public class LivingRoom
         square (30, 160);
         horizontal (40, 170, 2);
         horizontal (60, 180, 2);
-        c.setColor (gOne);
+        c.setColor (Colours.gOne);
         square (120, 110);
         square (100, 120);
         vertical (110, 130, 2);
@@ -243,44 +225,44 @@ public class LivingRoom
         diagonal (30, 170, 2);
         square (40, 160);
         square (50, 180);
-        c.setColor (gTwo);
+        c.setColor (Colours.gTwo);
         diagonal (120, 120, 2);
         square (90, 130);
         square (80, 150);
         horizontal (20, 150, 2);
         square (40, 180);
-        c.setColor (y);
+        c.setColor (Colours.y);
         square (100, 150);
         diagonal (60, 170, 2);
 
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         horizontal (520, 280, 11);
         horizontal (520, 310, 11);
         horizontal (520, 340, 11);
         horizontal (520, 380, 11);
         vertical (520, 280, 12);
         vertical (620, 280, 12);
-        c.setColor (cOpening);
+        c.setColor (Colours.cOpening);
         rectangle (530, 290, 610, 300);
         rectangle (530, 320, 610, 330);
         rectangle (530, 350, 610, 370);
-        c.setColor (lb);
+        c.setColor (Colours.lb);
         horizontal (560, 270, 3);
         vertical (570, 260, 4, true);
-        c.setColor (lsb);
+        c.setColor (Colours.lsb);
         horizontal (550, 220, 5);
-        c.setColor (lst);
+        c.setColor (Colours.lst);
         horizontal (550, 210, 5);
         horizontal (560, 200, 3);
         horizontal (560, 190, 3);
         square (570, 180);
 
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         horizontal (180, 390, 2);
         square (180, 400);
         horizontal (450, 390, 2);
         square (460, 400);
-        c.setColor (cSide);
+        c.setColor (Colours.cSide);
         rectangle (160, 360, 480, 380);
         horizontal (150, 350, 4);
         horizontal (460, 350, 4);
@@ -290,10 +272,10 @@ public class LivingRoom
         rectangle (460, 300, 500, 320);
         rectangle (130, 280, 170, 290);
         rectangle (470, 280, 510, 290);
-        c.setColor (cMiddle);
+        c.setColor (Colours.cMiddle);
         rectangle (180, 330, 460, 340);
         horizontal (190, 350, 27);
-        c.setColor (cTop);
+        c.setColor (Colours.cTop);
         horizontal (180, 240, 14);
         horizontal (330, 240, 14);
         rectangle (170, 250, 470, 270);
