@@ -1,10 +1,8 @@
 import hsa.Console;
-import javax.swing.*;
-import java.awt.*;
+
 import java.awt.image.*;
 import java.io.*;
 import javax.imageio.ImageIO;
-import java.util.*;
 
 public class drawCharacter
 {
@@ -28,19 +26,19 @@ public class drawCharacter
         {
             if (direction.equals ("front"))
             {
-                character = ImageIO.read (new File ("img/front_character.jpg"));
+                character = ImageIO.read (new File ("img/back_character.png"));
             }
             else if (direction.equals ("back"))
             {
-                character = ImageIO.read (new File ("img/back_character.jpg"));
+                character = ImageIO.read (new File ("img/front_character.png"));
             }
             else if (direction.equals ("left"))
             {
-                character = ImageIO.read (new File ("img/left_character.jpg"));
+                character = ImageIO.read (new File ("img/left_character.png"));
             }
             else if (direction.equals ("right"))
             {
-                character = ImageIO.read (new File ("img/right_character.jpg"));
+                character = ImageIO.read (new File ("img/right_character.png"));
             }
         }
         catch (IOException e)
@@ -48,8 +46,6 @@ public class drawCharacter
         }
 
 
-        c.setColor (Colours.white);
-        c.fillRect (0, 0, 640, 500);
         c.setColor (Colours.black);
         c.fillRect(300, 400, 40, 40); // goal
         c.drawImage (character, locationX, locationY, null);

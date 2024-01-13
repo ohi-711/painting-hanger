@@ -13,12 +13,39 @@ public class Basement
     char pressed;
     String direction = "front";
 
-    public Basement (Console con, int locationX, int locationY)
+    Box[] boxes;
+
+
+
+    public Basement (Console con, int x, int y)
     {
         c = con;
-        locationX = locationX;
-        locationY = locationY;
+        locationX = x;
+        locationY = y;
+        draw();
         walk ();
+    }
+
+    public void draw(){
+
+        c.setColor(Colours.frame);
+        c.fillRect(0, 0, 640, 500);
+        c.setColor(Colours.darkOrange);
+        boxes = new Box[]{
+                new Box(c, 60, 0, 560, 20),
+                new Box(c, 0, 60, 20, 460),
+                new Box(c, 620, 0, 20, 480),
+                new Box(c, 0, 480, 640, 20),
+                new Box(c, 80, 80, 500, 20),
+                new Box(c, 80, 80, 20, 80),
+                new Box(c, 0, 140, 80, 20),
+                new Box(c, 560, 80, 20, 120),
+                new Box(c, 100, 260, 600, 20)
+        };
+        for(int i = 0; i < boxes.length; i++){
+            boxes[i].draw();
+        }
+
     }
 
 
@@ -31,24 +58,25 @@ public class Basement
     public void walk ()
     {
         char pressed = c.getChar ();
+        boolean colliding = false;
 
 
-        if (pressed == 'w' && locationY - 20 > 0)
+        if (pressed == 'w' && locationY - 20 > 0 && !colliding)
         {
             locationY -= 20;
             direction = "front";
         }
-        else if (pressed == 'd' && locationX + 20 + 50 < 640) // 50 is character width
+        else if (pressed == 'd' && locationX + 20 + 40 < 640 && !colliding) // 40 is character width
         {
             locationX += 20;
             direction = "right";
         }
-        else if (pressed == 's' && locationY + 20 + 50 < 500) // 50 is character height
+        else if (pressed == 's' && locationY + 20 + 40 < 500 && !colliding) // 40 is character height
         {
             locationY += 20;
             direction = "back";
         }
-        else if (pressed == 'a' && locationX - 20 > 0)
+        else if (pressed == 'a' && locationX - 20 > 0 && !colliding)
         {
             locationX -= 20;
             direction = "left";
@@ -63,9 +91,10 @@ public class Basement
         while (true)
         {
             walk ();
+            draw();
             d.draw (c, locationX, locationY, direction);
             
-            if (locationX > 300 && locationX <= 400 && locationY > 400 && locationY <= 500) // fix collision pls
+            if (locationX >= 300-40 && locationX <= 340 && locationY > 400-40 && locationY <= 440) // fix collision pls
                 break;
         }
     }

@@ -18,13 +18,11 @@ public class HangingPainting
 	c = con;
 	paintingOption = paintingOption;
 	paintingPoints = paintingPoints;
-	walk ();
     }
 
 
     public void run ()
     {
-	drawCharacter ();
     }
 
 
@@ -65,18 +63,6 @@ public class HangingPainting
 	l.display();
     }
 
-
-    public void drawPainting ()
-    {
-	while (true)
-	{
-	    walk ();
-	    c.draw (c, 300, 300, paintingOption, paintingPoints);
-
-	    if (pressed == 'z')
-		break;
-	}
-    }
 }
 
 
