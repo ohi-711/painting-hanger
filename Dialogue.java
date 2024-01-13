@@ -9,13 +9,12 @@ public class Dialogue
     Console c;
     String option;
     char pressed;
-
     String[] dialogue = {};
 
-    public Dialogue (Console con, String[] dialogue)
+    public Dialogue (Console con, String[] d)
     {
         c = con;
-        dialogue = dialogue;
+        dialogue = d;
         LivingRoom l = new LivingRoom (c);
         l.display ();
         Alice a = new Alice (c);
@@ -34,15 +33,14 @@ public class Dialogue
         LivingRoomNone l2 = new LivingRoomNone (c);
         Alice a2 = new Alice (c);
         c.getChar();
-        c.getChar();
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.PLAIN, 30));
         c.drawString ("Hi Salad!", 130, 140);
         c.setFont (new Font ("Ariel", Font.BOLD, 25));
         c.drawString ("Press any key to continue", 140, 450);
-        for (int i = 0 ; i < dialogue.length ; i++)
+        c.getChar();
+        for (int i = 0 ; i < dialogue.length; i++)
         {
-            c.getChar ();
             l2.display ();
             a2.display (200, 250);
             c.setColor (Colours.black);
@@ -50,6 +48,7 @@ public class Dialogue
             c.drawString (dialogue [i], 130, 140);
             c.setFont (new Font ("Ariel", Font.BOLD, 25));
             c.drawString ("Press any key to continue", 140, 450);
+            c.getChar ();
         }
 
         c.clear ();
