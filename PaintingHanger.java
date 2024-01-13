@@ -21,7 +21,7 @@ public class PaintingHanger
     
     public void basement ()
     {
-        Basement b = new Basement (c, locationX, locationY);
+        Basement b = new Basement (c, 0, 0);
         b.run ();
     }
 

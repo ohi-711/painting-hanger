@@ -42,13 +42,13 @@ public class GameIntro
 		c.drawString ("Hi Salad!", 130, 140);
 		c.setFont (new Font ("Ariel", Font.BOLD, 25));
 		c.drawString ("Press any key to continue", 140, 450);
-		for(String line: dialogue){
+		for(int i = 0; i < dialogue.length; i++){
 			c.getChar();
 			l2.display();
 			a2.display(200, 250);
 			c.setColor (Colours.black);
 			c.setFont (new Font ("Ariel", Font.PLAIN, 30));
-			c.drawString (line, 130, 140);
+			c.drawString (dialogue[i], 130, 140);
 			c.setFont (new Font ("Ariel", Font.BOLD, 25));
 			c.drawString ("Press any key to continue", 140, 450);
 		}
