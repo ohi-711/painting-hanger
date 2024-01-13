@@ -1,3 +1,12 @@
+/*
+ * Name: April Sun, Daisy Li, Anne You
+ * Date: January 13th 2023
+ * Teacher: Ms. Krasteva
+ * Description: This program runs all the methods in the correct order
+ */
+
+// April
+// imports
 import hsa.Console;
 import java.lang.*;
 import java.awt.*;
@@ -7,14 +16,14 @@ import java.io.*;
 public class PaintingHanger
 {
     Console c;
-    String menuOption = "start";
-    char paintingOption = '1';
-    int paintingPoints = 0;
-    int locationX;
-    int locationY;
-    AudioStream as;
+    String menuOption = "start"; // the menu option selected (the default selected option is 'start')
+    char paintingOption = '1'; // the painting selected (the default selected painting is 1)
+    int paintingPoints = 0; // number of points the player gets
+    int locationX; // locationX of character
+    int locationY; // locationY of character
+    AudioStream as; // music
 
-    String[] dialogueBasement = {
+    String[] dialogueBasement = { // dialogue for the basement instructions
         "Thanks for agreeing to help...",
         "me hang up paintings!",
         "However, the box of paintings is...",
@@ -23,7 +32,7 @@ public class PaintingHanger
         "Thanks so much!"
         };
 
-    String[] dialogueHanging = {
+    String[] dialogueHanging = { // dialogue for the hanging painting instructions
         "Thanks for getting paintings!",
         "Could you help me hang them up?",
         "Pick which one looks the best...",
@@ -34,7 +43,7 @@ public class PaintingHanger
 
     public PaintingHanger ()
     {
-        c = new Console ("Painting Hanger");
+        c = new Console ("Painting Hanger"); // creates a new console
     }
 
 
@@ -56,8 +65,8 @@ public class PaintingHanger
     {
         PaintingSelection ps = new PaintingSelection (c, paintingOption);
         ps.run ();
-        paintingOption = ps.pressed;
-        paintingPoints = ps.paintingPoints;
+        paintingOption = ps.pressed; // updates the paintingOption variable
+        paintingPoints = ps.paintingPoints; // updates the paintingPoints variable
     }
 
 
@@ -65,7 +74,7 @@ public class PaintingHanger
     {
         MainMenu m = new MainMenu (c, menuOption);
         m.run ();
-        menuOption = m.option;
+        menuOption = m.option; // updates the menuOption variable
     }
 
 
@@ -97,7 +106,8 @@ public class PaintingHanger
     }
 
 
-    private void playMusic (String music)
+    // Daisy
+    private void playMusic (String music) // plays music
     {
         try
         {
@@ -116,7 +126,7 @@ public class PaintingHanger
         AudioPlayer.player.stop (as);
     }
 
-
+    // April and Daisy
     public static void main (String[] args)
     {
         PaintingHanger p = new PaintingHanger ();
@@ -125,33 +135,33 @@ public class PaintingHanger
         while (true)
         {
             p.menu ();
-            if (p.menuOption.equals ("start"))
+            if (p.menuOption.equals ("start")) // if the user chooses to play the game
             {
                 p.stopMusic ();
-                p.playMusic ("instructions");
-                p.dialogue (p.dialogueBasement);
+                p.playMusic ("instructions"); // plays different music for each area of the game (Daisy)
+                p.dialogue (p.dialogueBasement); // shows the dialogue for the basement
                 p.stopMusic ();
                 p.playMusic ("maze");
-                p.basement ();
+                p.basement (); // basement scene
                 p.stopMusic ();
                 p.playMusic ("instructions");
-                p.dialogue (p.dialogueHanging);
+                p.dialogue (p.dialogueHanging); // shows the dialogue for the hanging painting part
                 p.stopMusic ();
-                p.paintingSelection ();
+                p.paintingSelection (); // painting selection scene
                 p.playMusic ("music");
             }
-            if (p.menuOption.equals ("instructions"))
+            if (p.menuOption.equals ("instructions")) // if the user chooses to view instructions
             {
                 p.instructions ();
             }
-            if (p.menuOption.equals ("scoreboard"))
+            if (p.menuOption.equals ("scoreboard")) // if the user chooses to view the scoreboard
             {
                 p.scoreboard ();
             }
-            if (p.menuOption.equals ("quit"))
+            if (p.menuOption.equals ("quit")) // if the user chooses to exit the game
             {
                 p.goodbye ();
-                break;
+                break; // breaks out of while loop
             }
         }
 
