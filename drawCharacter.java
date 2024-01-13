@@ -1,5 +1,13 @@
-import hsa.Console;
+/*
+ * Name: April Sun, Daisy Li, Anne You
+ * Date: January 13th 2023
+ * Teacher: Ms. Krasteva
+ * Description: This program draws the character on the screen based off of the fields locationX and locationY. It also changes the appearance of the character based on the direction they are facing.
+ */
 
+// April
+
+import hsa.Console;
 import java.awt.image.*;
 import java.io.*;
 import javax.imageio.ImageIO;
