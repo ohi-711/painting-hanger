@@ -14,28 +14,43 @@ public class PaintingHanger
     int locationY;
     AudioStream as;
 
+    String[] dialogueBasement = {
+        "Thanks for agreeing to help...",
+        "me hang up paintings!",
+        "However, the box of paintings is...",
+        "in the basement!",
+        "Could you get it for me?",
+        "Thanks so much!"
+        };
+
+    String[] dialogueHanging = {
+        "Thanks for getting paintings!",
+        "Could you help me hang them up?",
+        "Pick which one looks the best...",
+        "...with my living room!",
+        "And then hang it up!",
+        "Thank you so much!"
+        };
+
     public PaintingHanger ()
     {
         c = new Console ("Painting Hanger");
     }
-    
+
+
     public void basement ()
     {
         Basement b = new Basement (c, 0, 0);
         b.run ();
     }
 
-    public void paintingInstructions ()
-    {
-        PaintingInstructions p = new PaintingInstructions (c);
-        p.run ();
-    }
 
     public void splashScreen ()
     {
         SplashScreen s = new SplashScreen (c);
         s.run ();
     }
+
 
     public void paintingSelection ()
     {
@@ -45,6 +60,7 @@ public class PaintingHanger
         paintingPoints = ps.paintingPoints;
     }
 
+
     public void menu ()
     {
         MainMenu m = new MainMenu (c, menuOption);
@@ -52,41 +68,52 @@ public class PaintingHanger
         menuOption = m.option;
     }
 
-    public void gameIntro ()
+
+    public void dialogue (String[] dialogue)
     {
-        GameIntro a = new GameIntro (c);
-        a.run ();
+        Dialogue d = new Dialogue (c, dialogue);
+        d.run ();
     }
+
 
     public void instructions ()
     {
         Instructions i = new Instructions (c);
         i.run ();
     }
-    
+
+
     public void scoreboard ()
     {
         Scoreboard s = new Scoreboard (c);
         s.run ();
     }
-    
+
+
     public void goodbye ()
     {
         Goodbye g = new Goodbye (c);
         g.run ();
     }
 
-    private void playMusic(String music){
-         try{
-             as = new AudioStream(new FileInputStream("audio/"+music+".wav"));
-         } catch (Exception e){
 
-         }
-         AudioPlayer.player.start(as);
+    private void playMusic (String music)
+    {
+        try
+        {
+            as = new AudioStream (new FileInputStream ("audio/" + music + ".wav"));
+        }
+        catch (Exception e)
+        {
+
+        }
+        AudioPlayer.player.start (as);
     }
 
-    private void stopMusic(){
-        AudioPlayer.player.stop(as);
+
+    private void stopMusic ()
+    {
+        AudioPlayer.player.stop (as);
     }
 
 
@@ -94,24 +121,24 @@ public class PaintingHanger
     {
         PaintingHanger p = new PaintingHanger ();
         p.splashScreen ();
-        p.playMusic("music");
+        p.playMusic ("music");
         while (true)
         {
             p.menu ();
             if (p.menuOption.equals ("start"))
             {
-                p.stopMusic();
-                p.playMusic("instructions");
-                p.gameIntro ();
-                p.stopMusic();
-                p.playMusic("maze");
+                p.stopMusic ();
+                p.playMusic ("instructions");
+                p.dialogue (p.dialogueBasement);
+                p.stopMusic ();
+                p.playMusic ("maze");
                 p.basement ();
-                p.stopMusic();
-                p.playMusic("instructions");
-                p.paintingInstructions ();
-                p.stopMusic();
+                p.stopMusic ();
+                p.playMusic ("instructions");
+                p.dialogue (p.dialogueHanging);
+                p.stopMusic ();
                 p.paintingSelection ();
-                p.playMusic("music");
+                p.playMusic ("music");
             }
             if (p.menuOption.equals ("instructions"))
             {
