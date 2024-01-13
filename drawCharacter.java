@@ -6,7 +6,7 @@
  */
 
 // April
-
+// imports
 import hsa.Console;
 import java.awt.image.*;
 import java.io.*;
@@ -15,9 +15,8 @@ import javax.imageio.ImageIO;
 public class drawCharacter
 {
     Console c;
-    String option;
-    char pressed;
-    BufferedImage character;
+    char pressed; // current key the user is pressing down on
+    BufferedImage character; // character image
 
     public drawCharacter (Console con, int locationX, int locationY, String direction)
     {
@@ -25,16 +24,15 @@ public class drawCharacter
         draw (c, locationX, locationY, direction);
     }
 
-
-    public void draw (Console con, int locationX, int locationY, String direction)
+    // draws the character based on locationX, locationY, and the direction they are facing
+    public void draw (Console con, int locationX, int locationY, String direction) 
     {
         c = con;
-        // imports image
         try
         {
-            if (direction.equals ("front"))
+            if (direction.equals ("front")) // checks the direction the player is facing
             {
-                character = ImageIO.read (new File ("img/back_character.png"));
+                character = ImageIO.read (new File ("img/back_character.png")); // loads the according image for the direction
             }
             else if (direction.equals ("back"))
             {
