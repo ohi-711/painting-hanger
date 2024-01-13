@@ -12,6 +12,7 @@ public class PaintingHanger
     int paintingPoints = 0;
     int locationX;
     int locationY;
+    AudioStream as;
 
     public PaintingHanger ()
     {
@@ -75,28 +76,42 @@ public class PaintingHanger
         g.run ();
     }
 
+    private void playMusic(String music){
+         try{
+             as = new AudioStream(new FileInputStream("audio/"+music+".wav"));
+         } catch (Exception e){
+
+         }
+         AudioPlayer.player.start(as);
+    }
+
+    private void stopMusic(){
+        AudioPlayer.player.stop(as);
+    }
+
 
     public static void main (String[] args)
     {
         PaintingHanger p = new PaintingHanger ();
         p.splashScreen ();
-        try // crediting Colin for his code that plays music
-        {
-            AudioStream as = new AudioStream (new FileInputStream ("audio/music.wav"));
-            AudioPlayer.player.start (as);
-        }
-        catch (Exception e)
-        {
-        }
+        p.playMusic("music");
         while (true)
         {
             p.menu ();
             if (p.menuOption.equals ("start"))
             {
+                p.stopMusic();
+                p.playMusic("instructions");
                 p.gameIntro ();
+                p.stopMusic();
+                p.playMusic("maze");
                 p.basement ();
+                p.stopMusic();
+                p.playMusic("instructions");
                 p.paintingInstructions ();
+                p.stopMusic();
                 p.paintingSelection ();
+                p.playMusic("music");
             }
             if (p.menuOption.equals ("instructions"))
             {

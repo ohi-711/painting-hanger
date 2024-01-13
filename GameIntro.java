@@ -10,32 +10,52 @@ public class GameIntro
     String option;
     char pressed;
 
+	String[] dialogue = {
+			"Thanks for agreeing to help...",
+			"me hang up paintings!",
+			"However, the box of paintings is...",
+			"in the basement!",
+			"Could you get it for me?",
+			"Thanks so much!"
+	};
+
     public GameIntro (Console con)
     {
-	c = con;
-	draw ();
+		c = con;
+		LivingRoom l = new LivingRoom (c);
+		l.display ();
+		Alice a = new Alice (c);
+		a.display (200, 250);
     }
 
+	public void run ()
+	{
+		dialogue ();
+	}
 
-    public void run ()
-    {
-	draw ();
-    }
+	public void dialogue ()
+	{
+		LivingRoomNone l2 = new LivingRoomNone (c);
+		Alice a2 = new Alice (c);
+		c.setColor (Colours.black);
+		c.setFont (new Font ("Ariel", Font.PLAIN, 30));
+		c.drawString ("Hi Salad!", 130, 140);
+		c.setFont (new Font ("Ariel", Font.BOLD, 25));
+		c.drawString ("Press any key to continue", 140, 450);
+		for(String line: dialogue){
+			c.getChar();
+			l2.display();
+			a2.display(200, 250);
+			c.setColor (Colours.black);
+			c.setFont (new Font ("Ariel", Font.PLAIN, 30));
+			c.drawString (line, 130, 140);
+			c.setFont (new Font ("Ariel", Font.BOLD, 25));
+			c.drawString ("Press any key to continue", 140, 450);
+		}
+
+		c.clear();
+		c.setColor(Colours.black);
 
 
-    public void draw ()
-    {
-	char pressed = c.getChar ();
-	c.setColor (Colours.white);
-	c.fillRect (0, 0, 640, 500);
-	c.setColor (Colours.black);
-	c.setFont (new Font ("Ariel", Font.BOLD, 45));
-	c.drawString ("Painting Hanger", 140, 80);
-
-	c.setFont (new Font ("Ariel", Font.PLAIN, 30));
-	c.drawString ("Welcome to the game!", 140, 140);
-
-	c.setFont (new Font ("Ariel", Font.BOLD, 25));
-	c.drawString ("Press any key to continue", 140, 450);
-    }
+	}
 }
