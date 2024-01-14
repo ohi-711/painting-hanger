@@ -19,7 +19,7 @@ public class PaintingOne
     }
 
 
-    //In display(), Painting number one of a moon is drawn
+    //In display(), Painting number one, a moon and sky image, is drawn
     public void display (int x, int y)
     {
         //Frame
