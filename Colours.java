@@ -1,4 +1,13 @@
 import java.awt.*;
+
+/**
+* This program stores the colours used throughout Anne, Daisy and April's ISP for ICS3UP
+* @author Anne You
+* @teacher Ms. Krasteva
+* @assignment ISP
+* January 12th, 2024
+*/
+
 public class Colours {
 
     //Main Menu 
