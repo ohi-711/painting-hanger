@@ -1,6 +1,14 @@
 import java.awt.*;
 import hsa.Console;
 
+/**
+* This program draws the fifth painting of Anne, Daisy and April's ISP for ICS3UP 
+* @author Anne You
+* @teacher Ms. Krasteva
+* @assignment ISP
+* January 12th, 2024
+*/
+
 public class PaintingFive
 {
     Console c;
@@ -11,26 +19,34 @@ public class PaintingFive
     }
 
     
+    //In display(), Painting number five, an image of a sunset and the Toronto skyline (CN Tower), is drawn
     public void display (int x, int y)
     {
+        //Frame
         c.setColor (Colours.frame);
         c.fillRect (0 + x, 0 + y, 330, 10);
         c.fillRect (0 + x, 250 + y, 330, 10);
         c.fillRect (0 + x, 0 + y, 10, 250);
         c.fillRect (320 + x, 0 + y, 10, 250);
+        //Sunset
+        //Yellow
         c.setColor (Colours.fiveyellow);
         c.fillRect (10 + x, 10 + y, 310, 70);
+        //Orange
         c.setColor (Colours.fiveorangeLight);
         c.fillRect (90 + x, 50 + y, 40, 10);
         c.fillRect (30 + x, 60 + y, 110, 10);
         c.fillRect (10 + x, 70 + y, 140, 10);
         c.fillRect (310 + x, 70 + y, 10, 10);
         c.fillRect (10 + x, 80 + y, 310, 50);
+        //Dark Orange
         c.setColor (Colours.fiveorange);
         c.fillRect (120 + x, 100 + y, 40, 10);
         c.fillRect (70 + x, 110 + y, 150, 10);
         c.fillRect (20 + x, 120 + y, 220, 10);
         c.fillRect (10 + x, 130 + y, 310, 70);
+        //Skyline
+        //Light Gray
         c.setColor (Colours.fivegrayLight);
         c.fillRect (90 + x, 150 + y, 30, 100);
         c.fillRect (120 + x, 180 + y, 10, 30);
@@ -40,6 +56,7 @@ public class PaintingFive
         c.fillRect (260 + x, 90 + y, 10, 130);
         c.fillRect (270 + x, 80 + y, 10, 160);
         c.fillRect (280 + x, 120 + y, 10, 130);
+        //Dark Gray
         c.setColor (Colours.fivegrayDark);
         c.fillRect (10 + x, 200 + y, 30, 50);
         c.fillRect (30 + x, 190 + y, 10, 10);
