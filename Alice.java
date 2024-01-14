@@ -25,14 +25,17 @@ public class Alice
         //Face
         c.setColor (Colours.skin);
         c.fillRect (10 + x, 20 + y, 70, 50);
+        
         //Shirt
         c.setColor (Colours.shirt);
         c.fillRect (20 + x, 70 + y, 60, 80);
+        
         //Pants
         c.setColor (Colours.pants);
         c.fillRect (10 + x, 150 + y, 30, 100);
         c.fillRect (50 + x, 150 + y, 30, 100);
         c.fillRect (40 + x, 150 + y, 10, 30);
+        
         //Hair + Eyes
         c.setColor (Colours.brown);
         c.fillRect (20 + x, 30 + y, 10, 20);
