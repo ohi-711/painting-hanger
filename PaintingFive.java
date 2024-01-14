@@ -28,6 +28,7 @@ public class PaintingFive
         c.fillRect (0 + x, 250 + y, 330, 10);
         c.fillRect (0 + x, 0 + y, 10, 250);
         c.fillRect (320 + x, 0 + y, 10, 250);
+        
         //Sunset
         //Yellow
         c.setColor (Colours.fiveyellow);
@@ -45,6 +46,7 @@ public class PaintingFive
         c.fillRect (70 + x, 110 + y, 150, 10);
         c.fillRect (20 + x, 120 + y, 220, 10);
         c.fillRect (10 + x, 130 + y, 310, 70);
+        
         //Skyline
         //Light Gray
         c.setColor (Colours.fivegrayLight);
