@@ -29,9 +29,11 @@ public class PaintingFour
         c.fillRect (0 + x, 160 + y, 290, 10);
         c.fillRect (0 + x, 0 + y, 10, 160);
         c.fillRect (280 + x, 0 + y, 10, 160);
+        
         //Blue Background
         c.setColor (Colours.fourbackground);
         c.fillRect (10 + x, 10 + y, 270, 150);
+        
         //Blue (dog)
         //Main blue dog body colour
         c.setColor (Colours.dogMain);
