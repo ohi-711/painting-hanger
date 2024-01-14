@@ -147,9 +147,11 @@ public class LivingRoom
         //Wall
         c.setColor (Colours.wall);
         rectangle (0, 0, 640, 350);
+        
         //Wall Trim
         c.setColor (Colours.lining);
         rectangle (0, 360, 640, 370);
+        
         //Tiles
         c.setColor (Colours.tile);
         rectangle (0, 380, 640, 490);
@@ -214,6 +216,7 @@ public class LivingRoom
         square (580, 410);
         vertical (570, 400, 2, true);
         diagonal (630, 400, 2);
+        
         //left Cabinet 
         c.setColor (Colours.cabinetLeg);
         horizontal (40, 300, 9);
@@ -222,6 +225,7 @@ public class LivingRoom
         vertical (120, 390, 10, true);
         c.setColor (Colours.cOpening);
         rectangle (50, 310, 110, 370);
+        
         //Plant
         c.setColor (Colours.fPot);
         horizontal (50, 260, 7);
@@ -254,6 +258,7 @@ public class LivingRoom
         c.setColor (Colours.y);
         square (100, 150);
         diagonal (60, 170, 2);
+        
         //Right Cabinet
         c.setColor (Colours.cabinetLeg);
         horizontal (520, 280, 11);
@@ -266,6 +271,7 @@ public class LivingRoom
         rectangle (530, 290, 610, 300);
         rectangle (530, 320, 610, 330);
         rectangle (530, 350, 610, 370);
+        
         //Lamp
         c.setColor (Colours.lb);
         horizontal (560, 270, 3);
@@ -277,6 +283,7 @@ public class LivingRoom
         horizontal (560, 200, 3);
         horizontal (560, 190, 3);
         square (570, 180);
+        
         //Couch
         c.setColor (Colours.cabinetLeg);
         horizontal (180, 390, 2);
