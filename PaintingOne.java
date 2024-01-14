@@ -28,9 +28,11 @@ public class PaintingOne
         c.fillRect (x, y + 150, 220, 10);
         c.fillRect (x, y, 10, 150);
         c.fillRect (x + 220, y, 10, 160);
+        
         //Sky(Background Colour)
         c.setColor (Colours.sky);
         c.fillRect (x + 10, y + 10, 210, 130);
+        
         //Mountains/Ground
         c.setColor (Colours.mountain);
         c.fillRect (10 + x, 140 + y, 140, 10);
@@ -61,6 +63,7 @@ public class PaintingOne
         c.fillRect (170 + x, 130 + y, 10, 10);
         c.fillRect (180 + x, 120 + y, 20, 10);
         c.fillRect (200 + x, 110 + y, 20, 10);
+        
         //Moon
         c.setColor (Colours.moon);
         c.fillRect (80 + x, 20 + y, 50, 10);
