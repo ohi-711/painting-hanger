@@ -103,5 +103,8 @@ public class PaintingSelection
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.BOLD, 42));
         c.drawString ("Select a painting!", 148, 65); // title
+        c.setFont (new Font ("Ariel", Font.PLAIN, 20));
+        c.drawString ("Press z to enter and 1,2,3,4,5 for choices", 140, 470); // writes instructions on how to use menu
+
     }
 }
