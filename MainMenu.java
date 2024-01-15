@@ -94,6 +94,8 @@ public class MainMenu
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.BOLD, 45));
         c.drawString ("Painting Hanger", 140, 80); // writes the title at the top of the menu
+        c.setFont (new Font ("Ariel", Font.PLAIN, 20));
+        c.drawString ("Press z to enter and 1,2,3,4 for choices", 140, 470); // writes instructions on how to use menu
 
         c.setColor (Colours.white);
         c.setFont (new Font ("Ariel", Font.BOLD, 35));
