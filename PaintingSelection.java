@@ -1,3 +1,12 @@
+/*
+ * Name: April Sun, Daisy Li, Anne You
+ * Date: January 13th 2023
+ * Teacher: Ms. Krasteva
+ * Description: This is the painting selection part of the game. The user can press 1, 2, 3, 4, or 5 and then 'z' to select the paintings
+ */
+
+// April
+// imports
 import hsa.Console;
 import hsa.*;
 import java.io.*;
@@ -7,8 +16,8 @@ import java.awt.Font;
 public class PaintingSelection
 {
     Console c;
-    char pressed;
-    int paintingPoints;
+    char pressed; // the key the user is pressing
+    int paintingPoints; // number of points based on the selection of the painting
 
     public PaintingSelection (Console con, char menuOption)
     {
@@ -22,13 +31,13 @@ public class PaintingSelection
         while (true)
         {
             draw ();
-            pressed = c.getChar ();
-            if (pressed == 'z')
+            pressed = c.getChar (); // gets user input
+            if (pressed == 'z') // keeps running until the user confirms their selection by pressing 'z'
                 break;
         }
     }
 
-    private void arrow (int locationX, int locationY)
+    private void arrow (int locationX, int locationY) // draws the arrow that shows the user what painting they are selecting
     {
         c.setColor (Colours.red);
         c.fillRect (locationX-20, locationY-20, 10, 10);
@@ -42,7 +51,7 @@ public class PaintingSelection
         c.fillRect (locationX+10, locationY+20, 10, 10);
     }
 
-    public void draw ()
+    public void draw () // draws the painting options
     {
         // clears background
         c.setColor (Colours.white);
@@ -68,7 +77,7 @@ public class PaintingSelection
         if (pressed == '1')
         {
             arrow (0, 90); 
-            paintingPoints = 400; // gives a value to paintingPoints depending on the choice of painting
+            paintingPoints = 400; // gives a value to paintingPoints depending on the choice of painting (values decided by how well they match the colours of the living room)
         }
         if (pressed == '2')
         {
@@ -93,6 +102,6 @@ public class PaintingSelection
 
         c.setColor (Colours.black);
         c.setFont (new Font ("Ariel", Font.BOLD, 42));
-        c.drawString ("Select a painting!", 148, 65);
+        c.drawString ("Select a painting!", 148, 65); // title
     }
 }
