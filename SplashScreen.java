@@ -1,7 +1,17 @@
+/*
+ * Name: April Sun, Daisy Li, Anne You
+ * Date: January 13th 2023
+ * Teacher: Ms. Krasteva
+ * Description: This program is the splashscreen that plays before the menu. The user can press any key to proceed to the menu
+ */
+
+// April
 // imports
 import hsa.Console;
 import hsa.*;
+import java.awt.image.*;
 import java.io.*;
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.Font;
 
@@ -10,6 +20,7 @@ public class SplashScreen
     Console c;
     String option;
     char pressed;
+    BufferedImage splashscreen; // splashscreen image
 
     public SplashScreen (Console con)
     {
@@ -53,11 +64,13 @@ public class SplashScreen
 
     public void draw ()
     {
-        c.setColor (Colours.black);
-        c.setFont (new Font ("Ariel", Font.BOLD, 45));
-        c.drawString ("Painting Hanger", 140, 80);
-        // add more here later for graphics
-        // also mention somewhere that you press 1,2,3,4 and z to choose and select a menu option
-
+        try
+        {
+            splashscreen = ImageIO.read (new File ("img/splashscreen.png")); // loads image (art drawn by April)
+        }
+        catch (IOException e)
+        {
+        }
+        c.drawImage (splashscreen, 0, 0, null); // draws splashscreen
     }
 }
