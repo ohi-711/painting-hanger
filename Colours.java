@@ -36,6 +36,12 @@ public class Colours {
     public static Color gTwo = new Color (139, 195, 74);
     public static Color y = new Color (205, 220, 57);
 
+    // Basement Maze
+    public static Color mBack = new Color(69, 1, 20);
+    public static Color mWalls = new Color(24, 0, 10);
+
+    public static Color box = new Color (100, 70, 46);
+
     //Paintings
     public static Color frame = new Color (115, 82, 56);
     

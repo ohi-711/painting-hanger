@@ -9,13 +9,14 @@ import hsa.Console;
 * January 12th, 2024
 */
 
-public class PaintingFive
+public class PaintingFive extends Painting
 {
-    Console c;
 
     public PaintingFive (Console con)
     {
-        c = con;
+        super(con);
+        width = 330;
+        height = 250;
     }
 
     

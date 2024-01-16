@@ -72,9 +72,9 @@ public class LivingRoomNone
         c.fillRect (0, 360, 640, 20);
         
         //Tiles
-        c.setColor (tile);
+        c.setColor (Colours.tile);
         c.fillRect (0, 380, 640, 120);
-        c.setColor (grout);
+        c.setColor (Colours.grout);
         horizontal (0, 380, 64);
         horizontal (0, 420, 64);
         horizontal (0, 460, 64);
@@ -137,21 +137,21 @@ public class LivingRoomNone
         diagonal (630, 400, 2);
         
         //left Cabinet 
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         horizontal (40, 300, 9);
         horizontal (40, 380, 9);
         vertical (40, 390, 10, true);
         vertical (120, 390, 10, true);
-        c.setColor (cOpening);
+        c.setColor (Colours.cOpening);
         c.fillRect (50, 310, 70, 70);
         
         //Plant
-        c.setColor (fPot);
+        c.setColor (Colours.fPot);
         horizontal (50, 260, 7);
         horizontal (60, 270, 5);
         horizontal (60, 280, 5);
         horizontal (70, 290, 3);
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         vertical (80, 250, 10, true);
         c.fillRect (90, 150, 10, 10);
         vertical (100, 140, 2, true);
@@ -159,7 +159,7 @@ public class LivingRoomNone
         c.fillRect (30, 160, 10, 10);
         horizontal (40, 170, 2);
         horizontal (60, 180, 2);
-        c.setColor (gOne);
+        c.setColor (Colours.gOne);
         c.fillRect (120, 110, 10, 10);
         c.fillRect (100, 120, 10, 10);
         vertical (110, 130, 2);
@@ -168,48 +168,48 @@ public class LivingRoomNone
         diagonal (30, 170, 2);
         c.fillRect (40, 160, 10, 10);
         c.fillRect (50, 180, 10, 10);
-        c.setColor (gTwo);
+        c.setColor (Colours.gTwo);
         diagonal (120, 120, 2);
         c.fillRect (90, 130, 10, 10);
         c.fillRect (80, 150, 10, 10);
         horizontal (20, 150, 2);
         c.fillRect (40, 180, 10, 10);
-        c.setColor (y);
+        c.setColor (Colours.y);
         c.fillRect (100, 150, 10, 10);
         diagonal (60, 170, 2);
 
         //Right Cabinet
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         horizontal (520, 280, 11);
         horizontal (520, 310, 11);
         horizontal (520, 340, 11);
         horizontal (520, 380, 11);
         vertical (520, 280, 12);
         vertical (620, 280, 12);
-        c.setColor (cOpening);
+        c.setColor (Colours.cOpening);
         c.fillRect (530, 290, 90, 20);
         c.fillRect (530, 320, 90, 20);
         c.fillRect (530, 350, 90, 30);
 
         //Lamp
-        c.setColor (lb);
+        c.setColor (Colours.lb);
         horizontal (560, 270, 3);
         vertical (570, 260, 4, true);
-        c.setColor (lsb);
+        c.setColor (Colours.lsb);
         horizontal (550, 220, 5);
-        c.setColor (lst);
+        c.setColor (Colours.lst);
         horizontal (550, 210, 5);
         horizontal (560, 200, 3);
         horizontal (560, 190, 3);
         c.fillRect (570, 180, 10, 10);
 
         //Couch
-        c.setColor (cabinetLeg);
+        c.setColor (Colours.cabinetLeg);
         horizontal (180, 390, 2);
         c.fillRect (180, 400, 10, 10);
         horizontal (450, 390, 2);
         c.fillRect (460, 400, 10, 10);
-        c.setColor (cSide);
+        c.setColor (Colours.cSide);
         c.fillRect (160, 360, 330, 30);
         horizontal (150, 350, 4);
         horizontal (460, 350, 4);
@@ -219,10 +219,10 @@ public class LivingRoomNone
         c.fillRect (460, 300, 50, 30);
         c.fillRect (130, 280, 50, 20);
         c.fillRect (470, 280, 50, 20);
-        c.setColor (cMiddle);
+        c.setColor (Colours.cMiddle);
         c.fillRect (180, 330, 290, 20);
         horizontal (190, 350, 27);
-        c.setColor (cTop);
+        c.setColor (Colours.cTop);
         horizontal (180, 240, 14);
         horizontal (330, 240, 14);
         c.fillRect (170, 250, 310, 30);

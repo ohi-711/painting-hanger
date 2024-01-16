@@ -51,9 +51,6 @@ public class drawCharacter
         {
         }
 
-
-        c.setColor (Colours.black);
-        c.fillRect(300, 400, 40, 40); // goal
         c.drawImage (character, locationX, locationY, null);
 
     }

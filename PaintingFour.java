@@ -10,13 +10,14 @@ import hsa.Console;
 * Credit: "BLUE'S CLUES" (4000 - Standard Character mark Typeset), trademarked to VIACOM INTERNATIONAL INC.
 */
 
-public class PaintingFour
+public class PaintingFour extends Painting
 {
-    Console c;
         
     public PaintingFour (Console con)
     {
-        c = con;
+        super(con);
+        width = 290;
+        height = 160;
     }
 
 

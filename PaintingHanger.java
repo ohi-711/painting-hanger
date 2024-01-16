@@ -61,12 +61,11 @@ public class PaintingHanger
     }
 
 
-    public void paintingSelection ()
+    public void hangingPainting ()
     {
-        PaintingSelection ps = new PaintingSelection (c, paintingOption);
-        ps.run ();
-        paintingOption = ps.pressed; // updates the paintingOption variable
-        paintingPoints = ps.paintingPoints; // updates the paintingPoints variable
+        HangingPainting hp = new HangingPainting (c);
+        hp.run ();
+        paintingPoints = hp.currentScore; // updates the paintingPoints variable
     }
 
 
@@ -147,7 +146,9 @@ public class PaintingHanger
                 p.playMusic ("instructions");
                 p.dialogue (p.dialogueHanging); // shows the dialogue for the hanging painting part
                 p.stopMusic ();
-                p.paintingSelection (); // painting selection scene
+                p.playMusic("hanging");
+                p.hangingPainting (); // painting selection scene
+                p.stopMusic();
                 p.playMusic ("music");
             }
             if (p.menuOption.equals ("instructions")) // if the user chooses to view instructions

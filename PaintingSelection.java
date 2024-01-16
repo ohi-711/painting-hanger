@@ -18,6 +18,7 @@ public class PaintingSelection
     Console c;
     char pressed; // the key the user is pressing
     int paintingPoints; // number of points based on the selection of the painting
+    int selection; // number to identify the selection of the painting
 
     public PaintingSelection (Console con, char menuOption)
     {
@@ -76,28 +77,28 @@ public class PaintingSelection
         // draws an arrow next to the selected painting
         if (pressed == '1')
         {
-            arrow (0, 90); 
-            paintingPoints = 400; // gives a value to paintingPoints depending on the choice of painting (values decided by how well they match the colours of the living room)
+            arrow (0, 90);
+            selection = 1;
         }
         if (pressed == '2')
         {
-            arrow (240, 90); 
-            paintingPoints = 300;
+            arrow (240, 90);
+            selection = 2;
         }
         if (pressed == '3')
         {
-            arrow (380, 90); 
-            paintingPoints = 200;
+            arrow (380, 90);
+            selection = 3;
         }
         if (pressed == '4')
         {
-            arrow (0, 260); 
-            paintingPoints = 500;
+            arrow (0, 260);
+            selection = 4;
         }
         if (pressed == '5')
         {
-            arrow (300, 260); 
-            paintingPoints = 100;
+            arrow (300, 260);
+            selection = 5;
         }
 
         c.setColor (Colours.black);

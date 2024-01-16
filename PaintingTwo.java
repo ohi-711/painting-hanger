@@ -9,13 +9,14 @@ import hsa.Console;
 * January 12th, 2024
 */
 
-public class PaintingTwo
+public class PaintingTwo extends Painting
 {
-    Console c;
 
     public PaintingTwo (Console con)
     {
-        c = con;
+        super(con);
+        width = 130;
+        height = 130;
     }
 
     //In display(), Painting number two, an abstract painting, is drawn
