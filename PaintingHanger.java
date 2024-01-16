@@ -104,6 +104,11 @@ public class PaintingHanger
         g.run ();
     }
 
+    public void finalScore(){
+        FinalScore fs = new FinalScore(c, paintingPoints);
+        fs.run();
+    }
+
 
     // Daisy
     private void playMusic (String music) // plays music
@@ -149,7 +154,11 @@ public class PaintingHanger
                 p.playMusic("hanging");
                 p.hangingPainting (); // painting selection scene
                 p.stopMusic();
+                p.playMusic("win");
+                p.finalScore();
+                p.stopMusic();
                 p.playMusic ("music");
+
             }
             if (p.menuOption.equals ("instructions")) // if the user chooses to view instructions
             {

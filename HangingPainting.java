@@ -1,7 +1,7 @@
+// Daisy Li
+// This file runs the painting hanging game
+
 import hsa.Console;
-import hsa.*;
-import java.io.*;
-import java.awt.*;
 import java.awt.Font;
 import java.util.ArrayList;
 
@@ -12,15 +12,18 @@ public class HangingPainting
 	int currentPainting;
 	// current score
 	int currentScore;
+	// hanging painting's position
 	int currentX;
 	int currentY;
 	String currentPhase;
 
-	// the array with current paintings on the wall, each sub array being
-	// painting id, x, y
-	int[][] hanging = new int[5][3];
-	ArrayList<Painting> currentHanging= new ArrayList<>();
-	ArrayList<int[]> coords = new ArrayList<>();
+	// ArrayLists
+	// They are like arrays, but their size is changeable
+	// One to store Painting objects, the other to store coordinates
+	// Both are updated in sync
+	// Source: Java Documentation, ArrayList
+	ArrayList<Painting> currentHanging= new ArrayList<> ();
+	ArrayList<int[]> coords = new ArrayList<int[]>();
 
 	int[] scores = {400, 300, 200, 500, 100};
 
