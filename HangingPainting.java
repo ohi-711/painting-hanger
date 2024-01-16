@@ -9,23 +9,29 @@ public class HangingPainting
 {
     Console c;
 	// what the current painting being hung is
-	int currentPainting = 0;
+	int currentPainting;
 	// current score
-	int currentScore = 0;
-	int currentX = 0;
-	int currentY = 0;
+	int currentScore;
+	int currentX;
+	int currentY;
 	String currentPhase;
 
 	// the array with current paintings on the wall, each sub array being
 	// painting id, x, y
 	int[][] hanging = new int[5][3];
+	ArrayList<Painting> currentHanging= new ArrayList<>();
+	ArrayList<int[]> coords = new ArrayList<>();
 
 	int[] scores = {400, 300, 200, 500, 100};
+
 
     public HangingPainting (Console con)
     {
 		c = con;
 		currentPhase = "select";
+		currentScore = 0;
+		currentX = 0;
+		currentY = 0;
     }
 
 
@@ -73,53 +79,35 @@ public class HangingPainting
 				savePainting();
 				currentPhase = "look";
 			}
-
-
-
     }
 
 	public void savePainting(){
-		for(int i = 0; i < hanging.length; i++){
-			if(hanging[i][0] != 0){
-				hanging[i][0] = currentPainting;
-				hanging[i][1] = currentX;
-				hanging[i][2] = currentY;
-				currentScore += scores[currentPainting-1];
-				System.out.println(currentScore);
-				System.out.println(currentPainting);
-				break;
-			}
+		if(currentPainting == 1){
+			currentHanging.add(new PaintingOne(c));
+		} else if(currentPainting == 2){
+			currentHanging.add(new PaintingTwo(c));
+		} else if(currentPainting == 3){
+			currentHanging.add(new PaintingThree(c));
+		} else if(currentPainting == 4){
+			currentHanging.add(new PaintingFour(c));
+		} else if(currentPainting == 5){
+			currentHanging.add(new PaintingFive(c));
 		}
+		coords.add(new int[]{currentX, currentY});
+		currentScore += scores[currentPainting-1];
 		currentX = 0;
 		currentY = 0;
-
 	}
 
     public void draw ()
     {
 		LivingRoomNone l = new LivingRoomNone(c);
 		l.display();
-		for(int i = 0; i < hanging.length; i++){
-			System.out.println(hanging[i][0]);
-			if(hanging[i][0] != 0){
-				if(hanging[i][0] == 1){
-					PaintingOne p1 = new PaintingOne(c);
-					p1.display(hanging[i][1], hanging[i][2]);
-				} else if(hanging[i][0] == 2){
-					PaintingTwo p2 = new PaintingTwo(c);
-					p2.display(hanging[i][1], hanging[i][2]);
-				} else if(hanging[i][0] == 3){
-					PaintingThree p3 = new PaintingThree(c);
-					p3.display(hanging[i][1], hanging[i][2]);
-				} else if(hanging[i][0] == 4){
-					PaintingFour p4 = new PaintingFour(c);
-					p4.display(hanging[i][1], hanging[i][2]);
-				} else if(hanging[i][0] == 5){
-					PaintingFive p5 = new PaintingFive(c);
-					p5.display(hanging[i][1], hanging[i][2]);
-				}
-			}
-
+		c.setColor(Colours.black);
+		c.setFont(new Font("Ariel", Font.PLAIN, 20));
+		c.drawString("Score: "+currentScore, 530, 20);
+		for(int i = 0; i < currentHanging.size(); i++){
+			currentHanging.get(i).display(coords.get(i)[0], coords.get(i)[1]);
 		}
 		if(currentPainting == 1){
 			PaintingOne p = new PaintingOne(c);

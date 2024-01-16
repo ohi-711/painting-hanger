@@ -8,4 +8,8 @@ public class Painting {
     public Painting(Console con){
         c = con;
     }
+
+    public void display(int x, int y){
+
+    }
 }
