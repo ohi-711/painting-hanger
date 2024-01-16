@@ -9,7 +9,7 @@ import hsa.Console;
 * January 12th, 2024
 */
 
-public class PaintingOne extends Painting
+public class PaintingOne extends Painting // inherits the Painting parent class
 {
 
     public PaintingOne (Console con)
