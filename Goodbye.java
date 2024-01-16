@@ -9,13 +9,16 @@
 // imports
 import hsa.Console;
 import hsa.*;
+import java.awt.image.*;
 import java.io.*;
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.Font;
 
 public class Goodbye
 {
     Console c;
+    BufferedImage goodbye; // ending image
 
     public Goodbye (Console con)
     {
@@ -57,10 +60,14 @@ public class Goodbye
 
     public void draw () // ending screen
     {
-        c.setColor (Colours.black);
-        c.setFont (new Font ("Ariel", Font.BOLD, 45));
-        c.drawString ("Thank you for playing!", 90, 80);
-        // add more here later for graphics
+        try
+        {
+            goodbye = ImageIO.read (new File ("img/goodbye.png")); // loads image (art drawn by April)
+        }
+        catch (IOException e)
+        {
+        }
+        c.drawImage (goodbye, 0, 0, null); // draws ending image
 
     }
 }
