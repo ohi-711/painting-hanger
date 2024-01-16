@@ -24,14 +24,13 @@ public class HangingPainting
 
 	int[] scores = {400, 300, 200, 500, 100};
 
-
     public HangingPainting (Console con)
     {
-		c = con;
-		currentPhase = "select";
 		currentScore = 0;
 		currentX = 0;
 		currentY = 0;
+        c = con;
+        currentPhase = "select";
     }
 
 
@@ -103,6 +102,8 @@ public class HangingPainting
     {
 		LivingRoomNone l = new LivingRoomNone(c);
 		l.display();
+		c.setFont (new Font ("Ariel", Font.PLAIN, 20));
+		c.drawString ("Press z to confirm, r to select another painting, and w,a,s,d to move", 20, 470); // writes instructions on how to use hang the painting
 		c.setColor(Colours.black);
 		c.setFont(new Font("Ariel", Font.PLAIN, 20));
 		c.drawString("Score: "+currentScore, 530, 20);
