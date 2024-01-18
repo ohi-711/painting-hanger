@@ -22,8 +22,8 @@ public class HangingPainting
 	// One to store Painting objects, the other to store coordinates
 	// Both are updated in sync
 	// Source: Java Documentation, ArrayList
-	ArrayList<Painting> currentHanging= new ArrayList<> ();
-	ArrayList<int[]> coords = new ArrayList<int[]>();
+	Painting[] currentHanging = new Painting[1000];
+	int[][] coords = new int[1000][2];
 
 	int[] scores = {400, 300, 200, 500, 100};
 
@@ -84,18 +84,25 @@ public class HangingPainting
     }
 
 	public void savePainting(){
-		if(currentPainting == 1){
-			currentHanging.add(new PaintingOne(c));
-		} else if(currentPainting == 2){
-			currentHanging.add(new PaintingTwo(c));
-		} else if(currentPainting == 3){
-			currentHanging.add(new PaintingThree(c));
-		} else if(currentPainting == 4){
-			currentHanging.add(new PaintingFour(c));
-		} else if(currentPainting == 5){
-			currentHanging.add(new PaintingFive(c));
+		for(int i = 0; i < currentHanging.length; i++){
+			if(currentHanging[i] == null){
+				System.out.println("running");
+				if(currentPainting == 1){
+					currentHanging[i] = new PaintingOne(c);
+				} else if(currentPainting == 2){
+					currentHanging[i] = new PaintingTwo(c);
+				} else if(currentPainting == 3){
+					currentHanging[i] = new PaintingThree(c);
+				} else if(currentPainting == 4){
+					currentHanging[i] = new PaintingFour(c);
+				} else if(currentPainting == 5){
+					currentHanging[i] = new PaintingFive(c);
+				}
+				coords[i] = new int[]{currentX, currentY};
+				break;
+			}
+
 		}
-		coords.add(new int[]{currentX, currentY});
 		currentScore += scores[currentPainting-1];
 		currentX = 0;
 		currentY = 0;
@@ -110,8 +117,9 @@ public class HangingPainting
 		c.setColor(Colours.black);
 		c.setFont(new Font("Ariel", Font.PLAIN, 20));
 		c.drawString("Score: "+currentScore, 530, 20);
-		for(int i = 0; i < currentHanging.size(); i++){
-			currentHanging.get(i).display(coords.get(i)[0], coords.get(i)[1]);
+		for(int i = 0; i < currentHanging.length; i++){
+			if(currentHanging[i] != null)
+				currentHanging[i].display(coords[i][0], coords[i][1]);
 		}
 		if(currentPainting == 1){
 			PaintingOne p = new PaintingOne(c);

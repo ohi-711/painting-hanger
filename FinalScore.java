@@ -26,9 +26,9 @@ public class FinalScore {
             while (true) // loops through each line
             {
                 line = in.readLine ();
-                scores.add(line);
                 if (line == null) // breaks if it reads an empty line (no more scores)
                     break;
+                scores.add(line);
             }
             in.close ();
             PrintWriter pw = new PrintWriter(new FileWriter("scoreboard.txt"));
