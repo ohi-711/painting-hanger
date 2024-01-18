@@ -35,6 +35,9 @@ public class FinalScore {
             PrintWriter pw = new PrintWriter(new FileWriter("scoreboard.txt"));
             pw.println(finalScore);
             for(int i = 0; i < scores.length; i++){
+                if(scores[i] == null){
+                    break;
+                }
                 pw.println(scores[i]);
             }
             pw.close();
