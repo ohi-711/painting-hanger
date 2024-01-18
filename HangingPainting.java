@@ -86,7 +86,6 @@ public class HangingPainting
 	public void savePainting(){
 		for(int i = 0; i < currentHanging.length; i++){
 			if(currentHanging[i] == null){
-				System.out.println("running");
 				if(currentPainting == 1){
 					currentHanging[i] = new PaintingOne(c);
 				} else if(currentPainting == 2){
