@@ -17,24 +17,25 @@ public class FinalScore {
     }
 
     public void run(){
-        ArrayList<String> scores = new ArrayList<>();
+        String[] scores = new String[10000];
         // Create
         try{
             BufferedReader in;
             String line;
+            int count = 0;
             in = new BufferedReader (new FileReader ("scoreboard.txt")); // reads from scoreboard.txt
             while (true) // loops through each line
             {
                 line = in.readLine ();
                 if (line == null) // breaks if it reads an empty line (no more scores)
                     break;
-                scores.add(line);
+                scores[count] = line;
             }
             in.close ();
             PrintWriter pw = new PrintWriter(new FileWriter("scoreboard.txt"));
             pw.println(finalScore);
-            for(int i = 0; i < scores.size(); i++){
-                pw.println(scores.get(i));
+            for(int i = 0; i < scores.length; i++){
+                pw.println(scores[i]);
             }
             pw.close();
         } catch (IOException e){}

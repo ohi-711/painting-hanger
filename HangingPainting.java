@@ -16,12 +16,6 @@ public class HangingPainting
 	int currentX;
 	int currentY;
 	String currentPhase;
-
-	// ArrayLists
-	// They are like arrays, but their size is changeable
-	// One to store Painting objects, the other to store coordinates
-	// Both are updated in sync
-	// Source: Java Documentation, ArrayList
 	Painting[] currentHanging = new Painting[1000];
 	int[][] coords = new int[1000][2];
 
